@@ -38,7 +38,7 @@ sudo systemctl restart systemd-binfmt.service
 
 ### How do I test if it's working
 
-NOTE: You will need to `sudo docker` below if you haven't set up the appropriate [permissions](https://docs.docker.com/engine/installation/linux/linux-postinstall/). Your might have to restart docker service for [buildx](https://docs.docker.com/buildx/working-with-buildx/) to pick up the platforms.
+NOTE: You will need to `sudo docker` below if you haven't set up the appropriate [permissions](https://docs.docker.com/engine/installation/linux/linux-postinstall/). You might have to restart docker service for [buildx](https://docs.docker.com/buildx/working-with-buildx/) to pick up the additional platforms.
 
 ```
 user@ubuntu:~# docker buildx ls
@@ -59,4 +59,4 @@ If the container outputs its arch without error, you're good to go!
 
 ### Why isn't this built into Debian/Ubuntu (but it is in Fedora)?
 
-Not sure, that systemd service is distributed with them out of the box, but Fedora supplies these files with their qemu-user-static package, while Debian and Ubuntu don't. Bug report is here: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=868217
+Fedora supplies these files with their qemu-user-static package, while Debian and Ubuntu don't. Bug report is here: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=868217
